@@ -1,6 +1,6 @@
 import React from "react";
 
-class UpdateWeather extends React.Component {
+class MakeVote extends React.Component {
   state = { stackId: null };
 
   handleKeyDown = e => {
@@ -12,13 +12,11 @@ class UpdateWeather extends React.Component {
 
   setValue = value => {
     const { drizzle, drizzleState } = this.props;
-    console.log(drizzle)
 
-    const contract = drizzle.contracts.WeatherOracle;
+    const contract = drizzle.contracts.VoteForSweaterPt3;
 
     // let drizzle know we want to call the `set` method with `value`
-    console.log(drizzleState.accounts[0])
-    const stackId = contract.methods["updateWeather"].cacheSend(value, {
+    const stackId = contract.methods["sweaterVote"].cacheSend(value, {
 
       from: drizzleState.accounts[0]
     });
@@ -53,4 +51,4 @@ class UpdateWeather extends React.Component {
   }
 }
 
-export default UpdateWeather;
+export default MakeVote;

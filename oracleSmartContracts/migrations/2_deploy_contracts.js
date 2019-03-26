@@ -1,8 +1,7 @@
-const WeatherOracle = artifacts.require("WeatherOracle");
-const BettingContract = artifacts.require("Betting");
+const VoteForSweaterPt3 = artifacts.require("VoteForSweaterPt3");
 
 module.exports = function(deployer) {
-  deployer.deploy(WeatherOracle)
+  deployer.deploy(VoteForSweaterPt3)
   // .then(function() {
   //   return deployer.deploy(BettingContract, WeatherOracle.address)
   // });

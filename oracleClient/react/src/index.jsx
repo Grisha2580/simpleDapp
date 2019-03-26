@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import ReadWeather from './ReadWeather'
-import UpdateWeather from './UpdateWeather'
-import WeatherOracle from './contracts/WeatherOracle'
-import {Drizzle, generateStore} from 'drizzle'
+import VoteForSweaterPt3 from './contracts/VoteForSweaterPt3'
+import {Drizzle} from 'drizzle'
 
 
 
@@ -16,7 +14,7 @@ import {Drizzle, generateStore} from 'drizzle'
 
 // let drizzle know what contracts we want and how to access our test blockchain
 const options = {
-  contracts: [WeatherOracle],
+  contracts: [VoteForSweaterPt3],
   // web3: {
   //   fallback: {
   //     type: "http",

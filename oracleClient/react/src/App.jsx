@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import ReadWeather from './ReadWeather'
-import UpdateWeather from './UpdateWeather'
+import ShowSweaters from './ShowSweaters'
+import MakeVote from './MakeVote'
 
 
 
@@ -33,6 +32,7 @@ state = { loading: true, drizzleState: null };
 
  componentDidMount() {
    const { drizzle } = this.props;
+   console.log('I did somehting')
 
    // subscribe to changes in the store
    this.unsubscribe = drizzle.store.subscribe(() => {
@@ -55,11 +55,11 @@ state = { loading: true, drizzleState: null };
    if (this.state.loading) return "Loading Drizzle...";
 
    return (
-   <div> <ReadWeather
+   <div> <ShowSweaters
             drizzle={this.props.drizzle}
             drizzleState={this.state.drizzleState}/>
 
-         <UpdateWeather
+          <MakeVote
             drizzle = {this.props.drizzle}
             drizzleState= {this.state.drizzleState}/>
    </div>
