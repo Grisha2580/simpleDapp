@@ -2,46 +2,6 @@
   "contractName": "WeatherOracle",
   "abi": [
     {
-      "constant": false,
-      "inputs": [],
-      "name": "renounceOwnership",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x715018a6"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "owner",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function",
-      "signature": "0x8da5cb5b"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "isOwner",
-      "outputs": [
-        {
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function",
-      "signature": "0x8f32d59b"
-    },
-    {
       "constant": true,
       "inputs": [],
       "name": "oracleAddress",
@@ -57,19 +17,11 @@
       "signature": "0xa89ae4ba"
     },
     {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "newOwner",
-          "type": "address"
-        }
-      ],
-      "name": "transferOwnership",
-      "outputs": [],
+      "inputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0xf2fde38b"
+      "type": "constructor",
+      "signature": "constructor"
     },
     {
       "anonymous": false,
@@ -83,24 +35,6 @@
       "name": "WeatherUpdate",
       "type": "event",
       "signature": "0xae608db43fb396fdb8dfe578e7beb5455281190ac7e828456ce9df4dec4636e4"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "name": "previousOwner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "name": "newOwner",
-          "type": "address"
-        }
-      ],
-      "name": "OwnershipTransferred",
-      "type": "event",
-      "signature": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
     },
     {
       "constant": false,
@@ -133,20 +67,20 @@
       "signature": "0x6421d04b"
     }
   ],
-  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3610590806100cf6000396000f300608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636421d04b14610088578063715018a6146100b35780638da5cb5b146100ca5780638f32d59b14610121578063a89ae4ba14610150578063b5360d02146101a7578063f2fde38b146101d4575b600080fd5b34801561009457600080fd5b5061009d610217565b6040518082815260200191505060405180910390f35b3480156100bf57600080fd5b506100c8610221565b005b3480156100d657600080fd5b506100df6102f3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561012d57600080fd5b5061013661031c565b604051808215151515815260200191505060405180910390f35b34801561015c57600080fd5b50610165610373565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101b357600080fd5b506101d260048036038101908080359060200190929190505050610399565b005b3480156101e057600080fd5b50610215600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061044b565b005b6000600254905090565b61022961031c565b151561023457600080fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6103a161031c565b15156103ac57600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561040857600080fd5b806002819055507fae608db43fb396fdb8dfe578e7beb5455281190ac7e828456ce9df4dec4636e46002546040518082815260200191505060405180910390a150565b61045361031c565b151561045e57600080fd5b6104678161046a565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156104a657600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820ff14a29e5cb123b48a87265ee7612dd76f31f907f49a489403547ce4ef5b42590029",
-  "deployedBytecode": "0x608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636421d04b14610088578063715018a6146100b35780638da5cb5b146100ca5780638f32d59b14610121578063a89ae4ba14610150578063b5360d02146101a7578063f2fde38b146101d4575b600080fd5b34801561009457600080fd5b5061009d610217565b6040518082815260200191505060405180910390f35b3480156100bf57600080fd5b506100c8610221565b005b3480156100d657600080fd5b506100df6102f3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561012d57600080fd5b5061013661031c565b604051808215151515815260200191505060405180910390f35b34801561015c57600080fd5b50610165610373565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101b357600080fd5b506101d260048036038101908080359060200190929190505050610399565b005b3480156101e057600080fd5b50610215600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061044b565b005b6000600254905090565b61022961031c565b151561023457600080fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6103a161031c565b15156103ac57600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561040857600080fd5b806002819055507fae608db43fb396fdb8dfe578e7beb5455281190ac7e828456ce9df4dec4636e46002546040518082815260200191505060405180910390a150565b61045361031c565b151561045e57600080fd5b6104678161046a565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156104a657600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820ff14a29e5cb123b48a87265ee7612dd76f31f907f49a489403547ce4ef5b42590029",
-  "sourceMap": "51:404:3:-;;;524:10:2;515:6;;:19;;;;;;;;;;;;;;;;;;582:6;;;;;;;;;;;549:40;;578:1;549:40;;;;;;;;;;;;51:404:3;;;;;;",
-  "deployedSourceMap": "51:404:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;366:87;;8:9:-1;5:2;;;30:1;27;20:12;5:2;366:87:3;;;;;;;;;;;;;;;;;;;;;;;1423:137:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1423:137:2;;;;;;659:77;;8:9:-1;5:2;;;30:1;27;20:12;5:2;659:77:2;;;;;;;;;;;;;;;;;;;;;;;;;;;979:90;;8:9:-1;5:2;;;30:1;27;20:12;5:2;979:90:2;;;;;;;;;;;;;;;;;;;;;;;;;;;89:28:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;89:28:3;;;;;;;;;;;;;;;;;;;;;;;;;;;185:177;;8:9:-1;5:2;;;30:1;27;20:12;5:2;185:177:3;;;;;;;;;;;;;;;;;;;;;;;;;;1731:107:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1731:107:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;366:87:3;413:9;437:11;;430:18;;366:87;:::o;1423:137:2:-;863:9;:7;:9::i;:::-;855:18;;;;;;;;1521:1;1484:40;;1505:6;;;;;;;;;;;1484:40;;;;;;;;;;;;1551:1;1534:6;;:19;;;;;;;;;;;;;;;;;;1423:137::o;659:77::-;697:7;723:6;;;;;;;;;;;716:13;;659:77;:::o;979:90::-;1019:4;1056:6;;;;;;;;;;;1042:20;;:10;:20;;;1035:27;;979:90;:::o;89:28:3:-;;;;;;;;;;;;;:::o;185:177::-;863:9:2;:7;:9::i;:::-;855:18;;;;;;;;273:13:3;;;;;;;;;;;259:27;;:10;:27;;;251:36;;;;;;;;307:12;293:11;:26;;;;330:27;345:11;;330:27;;;;;;;;;;;;;;;;;;185:177;:::o;1731:107:2:-;863:9;:7;:9::i;:::-;855:18;;;;;;;;1803:28;1822:8;1803:18;:28::i;:::-;1731:107;:::o;1982:183::-;2075:1;2055:22;;:8;:22;;;;2047:31;;;;;;;;2122:8;2093:38;;2114:6;;;;;;;;;;;2093:38;;;;;;;;;;;;2150:8;2141:6;;:17;;;;;;;;;;;;;;;;;;1982:183;:::o",
-  "source": "pragma solidity ^0.4.25;\n\nimport \"./Ownable.sol\";\n\ncontract WeatherOracle is Ownable {\n  address public oracleAddress;\n  uint temperature;\n\n  event WeatherUpdate (uint temperature);\n\n  function updateWeather (uint _temperature) public onlyOwner {\n    require(msg.sender == oracleAddress);\n    temperature = _temperature;\n    emit WeatherUpdate (temperature);\n  }\n\n  function getTemperature() public view returns (uint temp) {\n    return temperature;\n  }\n}\n",
-  "sourcePath": "/Users/grisha/Blockchain/dapp/oracleSmartContracts/contracts/WeatherOracle.sol",
+  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600a600181905550610204806100686000396000f300608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636421d04b1461005c578063a89ae4ba14610087578063b5360d02146100de575b600080fd5b34801561006857600080fd5b5061007161010b565b6040518082815260200191505060405180910390f35b34801561009357600080fd5b5061009c610115565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100ea57600080fd5b506101096004803603810190808035906020019092919050505061013a565b005b6000600154905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561019557600080fd5b806001819055507fae608db43fb396fdb8dfe578e7beb5455281190ac7e828456ce9df4dec4636e46001546040518082815260200191505060405180910390a1505600a165627a7a723058206ce326cea2973abf8d42702fddff877d13e39e15f6a549c67933833b1179a7f10029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636421d04b1461005c578063a89ae4ba14610087578063b5360d02146100de575b600080fd5b34801561006857600080fd5b5061007161010b565b6040518082815260200191505060405180910390f35b34801561009357600080fd5b5061009c610115565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100ea57600080fd5b506101096004803603810190808035906020019092919050505061013a565b005b6000600154905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561019557600080fd5b806001819055507fae608db43fb396fdb8dfe578e7beb5455281190ac7e828456ce9df4dec4636e46001546040518082815260200191505060405180910390a1505600a165627a7a723058206ce326cea2973abf8d42702fddff877d13e39e15f6a549c67933833b1179a7f10029",
+  "sourceMap": "57:464:3:-;;;137:77;8:9:-1;5:2;;;30:1;27;20:12;5:2;137:77:3;175:10;159:13;;:26;;;;;;;;;;;;;;;;;;207:2;193:11;:16;;;;57:464;;;;;;",
+  "deployedSourceMap": "57:464:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;432:87;;8:9:-1;5:2;;;30:1;27;20:12;5:2;432:87:3;;;;;;;;;;;;;;;;;;;;;;;84:28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;84:28:3;;;;;;;;;;;;;;;;;;;;;;;;;;;261:167;;8:9:-1;5:2;;;30:1;27;20:12;5:2;261:167:3;;;;;;;;;;;;;;;;;;;;;;;;;;432:87;479:9;503:11;;496:18;;432:87;:::o;84:28::-;;;;;;;;;;;;;:::o;261:167::-;339:13;;;;;;;;;;;325:27;;:10;:27;;;317:36;;;;;;;;373:12;359:11;:26;;;;396:27;411:11;;396:27;;;;;;;;;;;;;;;;;;261:167;:::o",
+  "source": "pragma solidity ^0.4.25;\n\n/* import \"./Ownable.sol\"; */\n\ncontract WeatherOracle {\n  address public oracleAddress;\n  uint temperature;\n\n  constructor() {\n      oracleAddress = msg.sender;\n      temperature = 10;\n  }\n\n  event WeatherUpdate (uint temperature);\n\n  function updateWeather (uint _temperature) public {\n    require(msg.sender == oracleAddress);\n    temperature = _temperature;\n    emit WeatherUpdate (temperature);\n  }\n\n  function getTemperature() public view returns (uint temp) {\n    return temperature;\n  }\n}\n",
+  "sourcePath": "/home/greg/Documents/dapps/drizzleUpdate/oracleSmartContracts/contracts/WeatherOracle.sol",
   "ast": {
-    "absolutePath": "/Users/grisha/Blockchain/dapp/oracleSmartContracts/contracts/WeatherOracle.sol",
+    "absolutePath": "/home/greg/Documents/dapps/drizzleUpdate/oracleSmartContracts/contracts/WeatherOracle.sol",
     "exportedSymbols": {
       "WeatherOracle": [
-        544
+        552
       ]
     },
-    "id": 545,
+    "id": 553,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -161,58 +95,25 @@
         "src": "0:24:3"
       },
       {
-        "absolutePath": "/Users/grisha/Blockchain/dapp/oracleSmartContracts/contracts/Ownable.sol",
-        "file": "./Ownable.sol",
-        "id": 502,
-        "nodeType": "ImportDirective",
-        "scope": 545,
-        "sourceUnit": 500,
-        "src": "26:23:3",
-        "symbolAliases": [],
-        "unitAlias": ""
-      },
-      {
-        "baseContracts": [
-          {
-            "arguments": null,
-            "baseName": {
-              "contractScope": null,
-              "id": 503,
-              "name": "Ownable",
-              "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 499,
-              "src": "77:7:3",
-              "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$499",
-                "typeString": "contract Ownable"
-              }
-            },
-            "id": 504,
-            "nodeType": "InheritanceSpecifier",
-            "src": "77:7:3"
-          }
-        ],
-        "contractDependencies": [
-          499
-        ],
+        "baseContracts": [],
+        "contractDependencies": [],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 544,
+        "id": 552,
         "linearizedBaseContracts": [
-          544,
-          499
+          552
         ],
         "name": "WeatherOracle",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 506,
+            "id": 503,
             "name": "oracleAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 544,
-            "src": "89:28:3",
+            "scope": 552,
+            "src": "84:28:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -220,10 +121,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 505,
+              "id": 502,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "89:7:3",
+              "src": "84:7:3",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
                 "typeString": "address"
@@ -234,11 +135,11 @@
           },
           {
             "constant": false,
-            "id": 508,
+            "id": 505,
             "name": "temperature",
             "nodeType": "VariableDeclaration",
-            "scope": 544,
-            "src": "121:16:3",
+            "scope": 552,
+            "src": "116:16:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -246,10 +147,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 507,
+              "id": 504,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "121:4:3",
+              "src": "116:4:3",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -259,23 +160,171 @@
             "visibility": "internal"
           },
           {
+            "body": {
+              "id": 517,
+              "nodeType": "Block",
+              "src": "151:63:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 511,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 508,
+                      "name": "oracleAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 503,
+                      "src": "159:13:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 509,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 567,
+                        "src": "175:3:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 510,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "175:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "159:26:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 512,
+                  "nodeType": "ExpressionStatement",
+                  "src": "159:26:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 515,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 513,
+                      "name": "temperature",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 505,
+                      "src": "193:11:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "3130",
+                      "id": 514,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "207:2:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_10_by_1",
+                        "typeString": "int_const 10"
+                      },
+                      "value": "10"
+                    },
+                    "src": "193:16:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 516,
+                  "nodeType": "ExpressionStatement",
+                  "src": "193:16:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 518,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 506,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "148:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 507,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:0:3"
+            },
+            "scope": 552,
+            "src": "137:77:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
             "anonymous": false,
             "documentation": null,
-            "id": 512,
+            "id": 522,
             "name": "WeatherUpdate",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 511,
+              "id": 521,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 510,
+                  "id": 520,
                   "indexed": false,
                   "name": "temperature",
                   "nodeType": "VariableDeclaration",
-                  "scope": 512,
-                  "src": "163:16:3",
+                  "scope": 522,
+                  "src": "239:16:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -283,10 +332,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 509,
+                    "id": 519,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "163:4:3",
+                    "src": "239:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -296,15 +345,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "162:18:3"
+              "src": "238:18:3"
             },
-            "src": "142:39:3"
+            "src": "218:39:3"
           },
           {
             "body": {
-              "id": 534,
+              "id": 542,
               "nodeType": "Block",
-              "src": "245:117:3",
+              "src": "311:117:3",
               "statements": [
                 {
                   "expression": {
@@ -316,7 +365,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 523,
+                        "id": 531,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -325,18 +374,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 520,
+                            "id": 528,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 559,
-                            "src": "259:3:3",
+                            "referencedDeclaration": 567,
+                            "src": "325:3:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 521,
+                          "id": 529,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -344,7 +393,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "259:10:3",
+                          "src": "325:10:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -354,18 +403,18 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 522,
+                          "id": 530,
                           "name": "oracleAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 506,
-                          "src": "273:13:3",
+                          "referencedDeclaration": 503,
+                          "src": "339:13:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "259:27:3",
+                        "src": "325:27:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -379,118 +428,18 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 519,
+                      "id": 527,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        562,
-                        563
+                        570,
+                        571
                       ],
-                      "referencedDeclaration": 562,
-                      "src": "251:7:3",
+                      "referencedDeclaration": 570,
+                      "src": "317:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 524,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "251:36:3",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 525,
-                  "nodeType": "ExpressionStatement",
-                  "src": "251:36:3"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 528,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 526,
-                      "name": "temperature",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 508,
-                      "src": "293:11:3",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "id": 527,
-                      "name": "_temperature",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 514,
-                      "src": "307:12:3",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "src": "293:26:3",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 529,
-                  "nodeType": "ExpressionStatement",
-                  "src": "293:26:3"
-                },
-                {
-                  "eventCall": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "id": 531,
-                        "name": "temperature",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 508,
-                        "src": "345:11:3",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      ],
-                      "id": 530,
-                      "name": "WeatherUpdate",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 512,
-                      "src": "330:13:3",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
-                        "typeString": "function (uint256)"
                       }
                     },
                     "id": 532,
@@ -501,116 +450,115 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "330:27:3",
+                    "src": "317:36:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
                   "id": 533,
-                  "nodeType": "EmitStatement",
-                  "src": "325:32:3"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 535,
-            "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": false,
-            "modifiers": [
-              {
-                "arguments": null,
-                "id": 517,
-                "modifierName": {
-                  "argumentTypes": null,
-                  "id": 516,
-                  "name": "onlyOwner",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 433,
-                  "src": "235:9:3",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$__$",
-                    "typeString": "modifier ()"
-                  }
+                  "nodeType": "ExpressionStatement",
+                  "src": "317:36:3"
                 },
-                "nodeType": "ModifierInvocation",
-                "src": "235:9:3"
-              }
-            ],
-            "name": "updateWeather",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 515,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 514,
-                  "name": "_temperature",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 535,
-                  "src": "209:17:3",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 513,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "209:4:3",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "208:19:3"
-            },
-            "payable": false,
-            "returnParameters": {
-              "id": 518,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "245:0:3"
-            },
-            "scope": 544,
-            "src": "185:177:3",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 542,
-              "nodeType": "Block",
-              "src": "424:29:3",
-              "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 540,
-                    "name": "temperature",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 508,
-                    "src": "437:11:3",
+                    "id": 536,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 534,
+                      "name": "temperature",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 505,
+                      "src": "359:11:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 535,
+                      "name": "_temperature",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 524,
+                      "src": "373:12:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "359:26:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 539,
+                  "id": 537,
+                  "nodeType": "ExpressionStatement",
+                  "src": "359:26:3"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 539,
+                        "name": "temperature",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 505,
+                        "src": "411:11:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 538,
+                      "name": "WeatherUpdate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 522,
+                      "src": "396:13:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 540,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "396:27:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
                   "id": 541,
-                  "nodeType": "Return",
-                  "src": "430:18:3"
+                  "nodeType": "EmitStatement",
+                  "src": "391:32:3"
                 }
               ]
             },
@@ -618,28 +566,21 @@
             "id": 543,
             "implemented": true,
             "isConstructor": false,
-            "isDeclaredConst": true,
+            "isDeclaredConst": false,
             "modifiers": [],
-            "name": "getTemperature",
+            "name": "updateWeather",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 536,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "389:2:3"
-            },
-            "payable": false,
-            "returnParameters": {
-              "id": 539,
+              "id": 525,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 538,
-                  "name": "temp",
+                  "id": 524,
+                  "name": "_temperature",
                   "nodeType": "VariableDeclaration",
                   "scope": 543,
-                  "src": "413:9:3",
+                  "src": "285:17:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -647,10 +588,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 537,
+                    "id": 523,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "413:4:3",
+                    "src": "285:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -660,29 +601,117 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "412:11:3"
+              "src": "284:19:3"
             },
-            "scope": 544,
-            "src": "366:87:3",
+            "payable": false,
+            "returnParameters": {
+              "id": 526,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "311:0:3"
+            },
+            "scope": 552,
+            "src": "261:167:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 550,
+              "nodeType": "Block",
+              "src": "490:29:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 548,
+                    "name": "temperature",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 505,
+                    "src": "503:11:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 547,
+                  "id": 549,
+                  "nodeType": "Return",
+                  "src": "496:18:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 551,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getTemperature",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 544,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "455:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 547,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 546,
+                  "name": "temp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 551,
+                  "src": "479:9:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 545,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "479:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "478:11:3"
+            },
+            "scope": 552,
+            "src": "432:87:3",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 545,
-        "src": "51:404:3"
+        "scope": 553,
+        "src": "57:464:3"
       }
     ],
-    "src": "0:456:3"
+    "src": "0:522:3"
   },
   "legacyAST": {
-    "absolutePath": "/Users/grisha/Blockchain/dapp/oracleSmartContracts/contracts/WeatherOracle.sol",
+    "absolutePath": "/home/greg/Documents/dapps/drizzleUpdate/oracleSmartContracts/contracts/WeatherOracle.sol",
     "exportedSymbols": {
       "WeatherOracle": [
-        544
+        552
       ]
     },
-    "id": 545,
+    "id": 553,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -697,58 +726,25 @@
         "src": "0:24:3"
       },
       {
-        "absolutePath": "/Users/grisha/Blockchain/dapp/oracleSmartContracts/contracts/Ownable.sol",
-        "file": "./Ownable.sol",
-        "id": 502,
-        "nodeType": "ImportDirective",
-        "scope": 545,
-        "sourceUnit": 500,
-        "src": "26:23:3",
-        "symbolAliases": [],
-        "unitAlias": ""
-      },
-      {
-        "baseContracts": [
-          {
-            "arguments": null,
-            "baseName": {
-              "contractScope": null,
-              "id": 503,
-              "name": "Ownable",
-              "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 499,
-              "src": "77:7:3",
-              "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$499",
-                "typeString": "contract Ownable"
-              }
-            },
-            "id": 504,
-            "nodeType": "InheritanceSpecifier",
-            "src": "77:7:3"
-          }
-        ],
-        "contractDependencies": [
-          499
-        ],
+        "baseContracts": [],
+        "contractDependencies": [],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 544,
+        "id": 552,
         "linearizedBaseContracts": [
-          544,
-          499
+          552
         ],
         "name": "WeatherOracle",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 506,
+            "id": 503,
             "name": "oracleAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 544,
-            "src": "89:28:3",
+            "scope": 552,
+            "src": "84:28:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -756,10 +752,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 505,
+              "id": 502,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "89:7:3",
+              "src": "84:7:3",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
                 "typeString": "address"
@@ -770,11 +766,11 @@
           },
           {
             "constant": false,
-            "id": 508,
+            "id": 505,
             "name": "temperature",
             "nodeType": "VariableDeclaration",
-            "scope": 544,
-            "src": "121:16:3",
+            "scope": 552,
+            "src": "116:16:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -782,10 +778,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 507,
+              "id": 504,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "121:4:3",
+              "src": "116:4:3",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -795,23 +791,171 @@
             "visibility": "internal"
           },
           {
+            "body": {
+              "id": 517,
+              "nodeType": "Block",
+              "src": "151:63:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 511,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 508,
+                      "name": "oracleAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 503,
+                      "src": "159:13:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 509,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 567,
+                        "src": "175:3:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 510,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "175:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "159:26:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 512,
+                  "nodeType": "ExpressionStatement",
+                  "src": "159:26:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 515,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 513,
+                      "name": "temperature",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 505,
+                      "src": "193:11:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "3130",
+                      "id": 514,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "207:2:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_10_by_1",
+                        "typeString": "int_const 10"
+                      },
+                      "value": "10"
+                    },
+                    "src": "193:16:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 516,
+                  "nodeType": "ExpressionStatement",
+                  "src": "193:16:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 518,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 506,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "148:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 507,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:0:3"
+            },
+            "scope": 552,
+            "src": "137:77:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
             "anonymous": false,
             "documentation": null,
-            "id": 512,
+            "id": 522,
             "name": "WeatherUpdate",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 511,
+              "id": 521,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 510,
+                  "id": 520,
                   "indexed": false,
                   "name": "temperature",
                   "nodeType": "VariableDeclaration",
-                  "scope": 512,
-                  "src": "163:16:3",
+                  "scope": 522,
+                  "src": "239:16:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -819,10 +963,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 509,
+                    "id": 519,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "163:4:3",
+                    "src": "239:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -832,15 +976,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "162:18:3"
+              "src": "238:18:3"
             },
-            "src": "142:39:3"
+            "src": "218:39:3"
           },
           {
             "body": {
-              "id": 534,
+              "id": 542,
               "nodeType": "Block",
-              "src": "245:117:3",
+              "src": "311:117:3",
               "statements": [
                 {
                   "expression": {
@@ -852,7 +996,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 523,
+                        "id": 531,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -861,18 +1005,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 520,
+                            "id": 528,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 559,
-                            "src": "259:3:3",
+                            "referencedDeclaration": 567,
+                            "src": "325:3:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 521,
+                          "id": 529,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -880,7 +1024,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "259:10:3",
+                          "src": "325:10:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -890,18 +1034,18 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 522,
+                          "id": 530,
                           "name": "oracleAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 506,
-                          "src": "273:13:3",
+                          "referencedDeclaration": 503,
+                          "src": "339:13:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "259:27:3",
+                        "src": "325:27:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -915,118 +1059,18 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 519,
+                      "id": 527,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        562,
-                        563
+                        570,
+                        571
                       ],
-                      "referencedDeclaration": 562,
-                      "src": "251:7:3",
+                      "referencedDeclaration": 570,
+                      "src": "317:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 524,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "251:36:3",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 525,
-                  "nodeType": "ExpressionStatement",
-                  "src": "251:36:3"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 528,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 526,
-                      "name": "temperature",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 508,
-                      "src": "293:11:3",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "id": 527,
-                      "name": "_temperature",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 514,
-                      "src": "307:12:3",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "src": "293:26:3",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 529,
-                  "nodeType": "ExpressionStatement",
-                  "src": "293:26:3"
-                },
-                {
-                  "eventCall": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "id": 531,
-                        "name": "temperature",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 508,
-                        "src": "345:11:3",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      ],
-                      "id": 530,
-                      "name": "WeatherUpdate",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 512,
-                      "src": "330:13:3",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
-                        "typeString": "function (uint256)"
                       }
                     },
                     "id": 532,
@@ -1037,116 +1081,115 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "330:27:3",
+                    "src": "317:36:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
                   "id": 533,
-                  "nodeType": "EmitStatement",
-                  "src": "325:32:3"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 535,
-            "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": false,
-            "modifiers": [
-              {
-                "arguments": null,
-                "id": 517,
-                "modifierName": {
-                  "argumentTypes": null,
-                  "id": 516,
-                  "name": "onlyOwner",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 433,
-                  "src": "235:9:3",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$__$",
-                    "typeString": "modifier ()"
-                  }
+                  "nodeType": "ExpressionStatement",
+                  "src": "317:36:3"
                 },
-                "nodeType": "ModifierInvocation",
-                "src": "235:9:3"
-              }
-            ],
-            "name": "updateWeather",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 515,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 514,
-                  "name": "_temperature",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 535,
-                  "src": "209:17:3",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 513,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "209:4:3",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "208:19:3"
-            },
-            "payable": false,
-            "returnParameters": {
-              "id": 518,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "245:0:3"
-            },
-            "scope": 544,
-            "src": "185:177:3",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 542,
-              "nodeType": "Block",
-              "src": "424:29:3",
-              "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 540,
-                    "name": "temperature",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 508,
-                    "src": "437:11:3",
+                    "id": 536,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 534,
+                      "name": "temperature",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 505,
+                      "src": "359:11:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 535,
+                      "name": "_temperature",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 524,
+                      "src": "373:12:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "359:26:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 539,
+                  "id": 537,
+                  "nodeType": "ExpressionStatement",
+                  "src": "359:26:3"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 539,
+                        "name": "temperature",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 505,
+                        "src": "411:11:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 538,
+                      "name": "WeatherUpdate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 522,
+                      "src": "396:13:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 540,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "396:27:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
                   "id": 541,
-                  "nodeType": "Return",
-                  "src": "430:18:3"
+                  "nodeType": "EmitStatement",
+                  "src": "391:32:3"
                 }
               ]
             },
@@ -1154,28 +1197,21 @@
             "id": 543,
             "implemented": true,
             "isConstructor": false,
-            "isDeclaredConst": true,
+            "isDeclaredConst": false,
             "modifiers": [],
-            "name": "getTemperature",
+            "name": "updateWeather",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 536,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "389:2:3"
-            },
-            "payable": false,
-            "returnParameters": {
-              "id": 539,
+              "id": 525,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 538,
-                  "name": "temp",
+                  "id": 524,
+                  "name": "_temperature",
                   "nodeType": "VariableDeclaration",
                   "scope": 543,
-                  "src": "413:9:3",
+                  "src": "285:17:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1183,10 +1219,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 537,
+                    "id": 523,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "413:4:3",
+                    "src": "285:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1196,20 +1232,108 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "412:11:3"
+              "src": "284:19:3"
             },
-            "scope": 544,
-            "src": "366:87:3",
+            "payable": false,
+            "returnParameters": {
+              "id": 526,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "311:0:3"
+            },
+            "scope": 552,
+            "src": "261:167:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 550,
+              "nodeType": "Block",
+              "src": "490:29:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 548,
+                    "name": "temperature",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 505,
+                    "src": "503:11:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 547,
+                  "id": 549,
+                  "nodeType": "Return",
+                  "src": "496:18:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 551,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getTemperature",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 544,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "455:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 547,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 546,
+                  "name": "temp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 551,
+                  "src": "479:9:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 545,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "479:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "478:11:3"
+            },
+            "scope": 552,
+            "src": "432:87:3",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 545,
-        "src": "51:404:3"
+        "scope": 553,
+        "src": "57:464:3"
       }
     ],
-    "src": "0:456:3"
+    "src": "0:522:3"
   },
   "compiler": {
     "name": "solc",
@@ -1253,34 +1377,20 @@
       "links": {},
       "address": "0x342F19ed76dC0dCe593c9023926c45CCdA48e445",
       "transactionHash": "0x018586e88b8ecf28e27e6ef818d6144d4346fdbbd02fa720578d7b63e77dcc81"
+    },
+    "1553605692961": {
+      "events": {},
+      "links": {},
+      "address": "0xD0ed8516938AD5C3524431921FEea60c38d2b05C",
+      "transactionHash": "0x7f2f7dc9f64fbedf27067b385059e610fdf35217ed55729d40c9b66b54286d76"
     }
   },
   "schemaVersion": "3.0.5",
-  "updatedAt": "2019-03-26T01:50:48.664Z",
+  "updatedAt": "2019-03-26T13:19:26.591Z",
   "devdoc": {
-    "methods": {
-      "isOwner()": {
-        "return": "true if `msg.sender` is the owner of the contract."
-      },
-      "owner()": {
-        "return": "the address of the owner."
-      },
-      "renounceOwnership()": {
-        "details": "Allows the current owner to relinquish control of the contract. It will not be possible to call the functions with the `onlyOwner` modifier anymore."
-      },
-      "transferOwnership(address)": {
-        "details": "Allows the current owner to transfer control of the contract to a newOwner.",
-        "params": {
-          "newOwner": "The address to transfer ownership to."
-        }
-      }
-    }
+    "methods": {}
   },
   "userdoc": {
-    "methods": {
-      "renounceOwnership()": {
-        "notice": "Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
-      }
-    }
+    "methods": {}
   }
 }

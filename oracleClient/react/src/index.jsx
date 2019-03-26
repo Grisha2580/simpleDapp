@@ -17,12 +17,12 @@ import {Drizzle, generateStore} from 'drizzle'
 // let drizzle know what contracts we want and how to access our test blockchain
 const options = {
   contracts: [WeatherOracle],
-  web3: {
-    fallback: {
-      type: "http",
-      url: "http://127.0.0.1:9545",
-    },
-  },
+  // web3: {
+  //   fallback: {
+  //     type: "http",
+  //     url: "http://127.0.0.1:8545",
+  //   },
+  // },
 };
 
 // setup drizzle

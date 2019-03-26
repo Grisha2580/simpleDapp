@@ -6,14 +6,14 @@ contract WeatherOracle {
   address public oracleAddress;
   uint temperature;
 
-  constructor() internal {
-      address = msg.sender;
-      temperature = 10
+  constructor() {
+      oracleAddress = msg.sender;
+      temperature = 10;
   }
 
   event WeatherUpdate (uint temperature);
 
-  function updateWeather (uint _temperature) public onlyOwner {
+  function updateWeather (uint _temperature) public {
     require(msg.sender == oracleAddress);
     temperature = _temperature;
     emit WeatherUpdate (temperature);
