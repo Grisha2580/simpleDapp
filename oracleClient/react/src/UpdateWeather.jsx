@@ -33,6 +33,7 @@ class UpdateWeather extends React.Component {
 
     // get the transaction hash using our saved `stackId`
     const txHash = transactionStack[this.state.stackId];
+    console.log("this is another branch")
 
     // if transaction hash does not exist, don't display anything
     if (!txHash) return null;
@@ -45,6 +46,7 @@ class UpdateWeather extends React.Component {
     return (
       <div>
         <input type="text" onKeyDown={this.handleKeyDown} />
+
         <div>{this.getTxStatus()}</div>
       </div>
     );
