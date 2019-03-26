@@ -1217,14 +1217,46 @@
   },
   "networks": {
     "1553560920289": {
-      "events": {},
+      "events": {
+        "0xae608db43fb396fdb8dfe578e7beb5455281190ac7e828456ce9df4dec4636e4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "temperature",
+              "type": "uint256"
+            }
+          ],
+          "name": "WeatherUpdate",
+          "type": "event",
+          "signature": "0xae608db43fb396fdb8dfe578e7beb5455281190ac7e828456ce9df4dec4636e4"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event",
+          "signature": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
+        }
+      },
       "links": {},
-      "address": "0xe2fe00e0cE81576c6deF72eC5EEf753648BefE05",
-      "transactionHash": "0x06061798baef190472d99c5ce8f25cacb5af6bd3f311b64a77f493c7985b7dc6"
+      "address": "0x342F19ed76dC0dCe593c9023926c45CCdA48e445",
+      "transactionHash": "0x018586e88b8ecf28e27e6ef818d6144d4346fdbbd02fa720578d7b63e77dcc81"
     }
   },
   "schemaVersion": "3.0.5",
-  "updatedAt": "2019-03-26T01:15:49.135Z",
+  "updatedAt": "2019-03-26T01:50:48.664Z",
   "devdoc": {
     "methods": {
       "isOwner()": {

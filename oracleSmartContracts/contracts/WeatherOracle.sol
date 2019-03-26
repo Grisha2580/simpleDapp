@@ -1,10 +1,15 @@
 pragma solidity ^0.4.25;
 
-import "./Ownable.sol";
+/* import "./Ownable.sol"; */
 
-contract WeatherOracle is Ownable {
+contract WeatherOracle {
   address public oracleAddress;
   uint temperature;
+
+  constructor() internal {
+      address = msg.sender;
+      temperature = 10
+  }
 
   event WeatherUpdate (uint temperature);
 
