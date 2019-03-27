@@ -5,6 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import VoteForSweaterPt3 from './contracts/VoteForSweaterPt3'
 import {Drizzle} from 'drizzle'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css'
 
 
 

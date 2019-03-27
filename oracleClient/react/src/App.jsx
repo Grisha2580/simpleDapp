@@ -32,7 +32,7 @@ state = { loading: true, drizzleState: null };
 
  componentDidMount() {
    const { drizzle } = this.props;
-   console.log('I did somehting')
+   
 
    // subscribe to changes in the store
    this.unsubscribe = drizzle.store.subscribe(() => {
@@ -55,6 +55,9 @@ state = { loading: true, drizzleState: null };
    if (this.state.loading) return "Loading Drizzle...";
 
    return (
+
+
+
    <div> <ShowSweaters
             drizzle={this.props.drizzle}
             drizzleState={this.state.drizzleState}/>

@@ -1,4 +1,6 @@
 import React from "react";
+import {Button, ButtonToolbar} from 'react-bootstrap'
+import './style.css'
 
 class MakeVote extends React.Component {
   state = { stackId: null };
@@ -10,10 +12,11 @@ class MakeVote extends React.Component {
     }
   };
 
-  setValue = value => {
+  handleClick = e => {
     const { drizzle, drizzleState } = this.props;
 
     const contract = drizzle.contracts.VoteForSweaterPt3;
+    const value = e.target.value;
 
     // let drizzle know we want to call the `set` method with `value`
     const stackId = contract.methods["sweaterVote"].cacheSend(value, {
@@ -23,6 +26,10 @@ class MakeVote extends React.Component {
 
     // save the `stackId` for later reference
     this.setState({ stackId });
+  }
+
+  setValue = value => {
+
   };
 
   getTxStatus = () => {
@@ -31,7 +38,6 @@ class MakeVote extends React.Component {
 
     // get the transaction hash using our saved `stackId`
     const txHash = transactionStack[this.state.stackId];
-    console.log("this is another branch")
 
     // if transaction hash does not exist, don't display anything
     if (!txHash) return null;
@@ -41,9 +47,14 @@ class MakeVote extends React.Component {
   };
 
   render() {
+    const buttons = <Button as='input' type = 'button' value="Vote For Blue"></Button>
+
     return (
       <div>
-        <input type="text" onKeyDown={this.handleKeyDown} />
+        <button id='btnBlue' onClick = {this.handleClick} className = "btn btn--stripe" type ="button" value = "blue">Blue</button>
+        <button id='btnGreen' onClick = {this.handleClick} className = "btn btn--stripe" type ="button" value = "green">Green</button>
+        <button id='btnRed' onClick={this.handleClick} className = "btn btn--stripe" type ="button" value = "red">Red</button>
+        <button id='btnBrown' onClick={this.handleClick} className = "btn btn--stripe" type ="button" value = "brown">Brown</button>
 
         <div>{this.getTxStatus()}</div>
       </div>
