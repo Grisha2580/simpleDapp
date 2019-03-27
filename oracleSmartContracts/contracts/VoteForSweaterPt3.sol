@@ -7,7 +7,13 @@ contract VoteForSweaterPt3 {
   mapping(address => bool) alreadyVoted;
 
   event SweaterEvent(address sender, string color);
-  constructor
+
+  constructor() {
+    for (uint i = 0; i < colorChoices.length; i++) {
+      var color = colorChoices[i];
+      sweaterMap[color] = 0;
+    }
+  }
 
   function sweaterVote(string memory color) public {
     require(alreadyVoted[msg.sender] == false);

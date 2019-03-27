@@ -1,4 +1,14 @@
 import React from "react";
+import {Canvas} from 'react-canvas-js'
+import  CanvasJSReact from './canvasjs.react'
+import {BarChart, Bar} from 'recharts'
+var CanvasJS = CanvasJSReact.CanvasJS;
+var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
+
+// import CanvasJSReact from 'canvasjs.react';
+// var CanvasJS = CanvasJSReact.CanvasJS;
+// var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 class ShowSweaters extends React.Component {
   state = { votingResultKeys: {}, colorChoices: ["blue", "green", "red", "brown"] };
@@ -28,34 +38,56 @@ class ShowSweaters extends React.Component {
   }
 
   render() {
+
+
     // get the contract state from drizzleState
     const { VoteForSweaterPt3 } = this.props.drizzleState.contracts;
 
     // using the saved `dataKey`, get the variable we're interested in
     const colorChoices = this.state.colorChoices
-    console.log('This is the ' + this.state.colorChoicesKey)
-    console.log('These are in render ' + colorChoices)
 
     var votingData = {}
-    let value = VoteForSweaterPt3.getVotes[this.state.votingResultKeys]
 
     for (let i = 0; i < colorChoices.length; i++) {
       let color = colorChoices[i]
       let colorResultKey = this.state.votingResultKeys[color]
-      votingData[color] = VoteForSweaterPt3.getVotes[colorResultKey]
+      let oneVote = VoteForSweaterPt3.getVotes[colorResultKey]
+      const number = (number) => {if (typeof number === 'undefined') {return 0} else {return number.value}}
+      votingData[color] = number(oneVote)
     }
 
-    console.log(votingData)
-
-
-    const listItems = colorChoices.map(color => <li>{color} was voted by {votingData[color]}</li>);
 
 
 
-    var output = <p>My stored string: {votingData.value}</p>;
+    const options = {
+      // colorSet: ['blue', 'green', 'red', 'brown'],
+      title: {
+        text: "Basic Column Chart in React"
+      },
+      data: [{
+                type: "column",
+                dataPoints: [
+                    { label: "Blue",  y: (votingData['blue'] + 1) * 6 , x:10},
+                    { label: "Green", y: (votingData['green']  + 1) * 6, x: 20},
+                    { label: "Red", y: (votingData['red'] + 1) * 6, x:30},
+                    { label: "Brown",  y: (votingData['brown']  + 1) * 6, x:40},
+                ]
+       }]
+   }
 
 
-    return <ul>{listItems}</ul>
+    const listItems = colorChoices.map((color, key) => {return <li>{color} was voted by {votingData[color]}}</li>});
+
+      return (
+  		<div>
+  			<BarChart options = {options}
+  				/* onRef={ref => this.chart = ref} */
+  			/>
+  			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
+  		</div>
+  		);
+
+    // return <ul>{listItems}</ul>
     // return (
     //   <ul>
     //     {colorChoices.map((item, index) => {
