@@ -65,9 +65,9 @@ class SimpleBarChart extends React.Component{
 
   	return (
     	<BarChart width={600} height={300} data={data}
-            margin={{top: 100, right: 30, left: 20, bottom: 5}}>
+            margin={{top: 200, right: 30, left: 20, bottom: 20}}>
 
-       // <XAxis dataKey="name"/>
+
 
        // // <Tooltip/>
        <Bar dataKey="value" minPointSize={5} >
