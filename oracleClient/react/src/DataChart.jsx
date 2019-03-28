@@ -39,7 +39,7 @@ import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, LabelList, Legend, 
 //       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 // ];
 
-const data =  [{name: 'Blue', value: 300}, {name: 'Green', value:   2},
+const data =  [{name: 'Blue', value: 300, color: 'blue'}, {name: 'Green', value: 2},
                   {name: 'Red', value: 150}, {name: 'Brown', value: 400}];
 
 
@@ -58,16 +58,43 @@ const renderCustomizedLabel = (props) => {
     </g>
   );
 };
-class SimpleBarChart extends React.Component{
+
+const renderCustomAxisTick = ({ x, y, payload }) => {
+  let path = '';
+
+  console.log('trying ')
+
+  switch (payload.value) {
+    case 'Blue':
+      path = './sweaterImages/sweater_blue.png';
+      break;
+    case 'Green':
+      path = './sweaterImages/sweater_green.png';
+      break;
+    case 'Red':
+      path = './sweaterImages/sweater_red.png';
+      break
+    default:
+      path = './sweaterImages/sweater_brown.png';
+  }
+
+  return (
+
+    <img src = {require('./sweaterImages/sweater_blue.png')} alt = 'Blue Sweater' width = '24' height = '24'/>
+  );
+};
+
+class SimpleBarChart extends React.Component {
 	render () {
 
     const data = this.props.data
 
   	return (
     	<BarChart width={600} height={300} data={data}
-            margin={{top: 200, right: 30, left: 20, bottom: 20}}>
+            margin={{top: 60, right: 30, left: 20, bottom: 20}}>
 
 
+       <XAxis dataKey="name" tick = {false} />
 
        // // <Tooltip/>
        <Bar dataKey="value" minPointSize={5} >

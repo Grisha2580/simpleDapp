@@ -51,16 +51,27 @@ class ShowSweaters extends React.Component {
 
 
 
-    const data =  [{name: 'Blue', value: votingData['blue']}, {name: 'Green', value: votingData['green']},
-                      {name: 'Red', value: votingData['red']}, {name: 'Brown', value: votingData['brown']}];
+    const chartData =  [{name: 'Blue', value: votingData['blue'], color: 'blue', sweater: './sweaterImages/sweater_blue'},
+                    {name: 'Green', value: votingData['green'], color: 'green', sweater: './sweaterImages/sweater_green'},
+                      {name: 'Red', value: votingData['red'], color: 'red', sweater: './sweaterImages/sweater_red'},
+                       {name: 'Brown', value: votingData['brown'], color: 'brown', sweater: './sweaterImages/sweater_brown'}];
 
-  
 
-    const listItems = colorChoices.map((color, key) => {return <li>{color} was voted by {votingData[color]}}</li>});
+
+    // const listItems = colorChoices.map((color, key) => {return <li>{color} was voted by {votingData[color]}}</li>});
 
       return (
   		<div>
-  			<SimplePieChart data = {data} />
+        <div>
+          <img src = {require('./sweaterImages/sweater_blue.png')} style = {{marginLeft: 50, marginBottom:10}} alt = 'Blue Sweater' width = '80' height = '80'/>
+            <img src = {require('./sweaterImages/sweater_green.png')} style = {{marginLeft: 60, marginBottom:10}} alt = 'Blue Sweater' width = '80' height = '80'/>
+             <img src = {require('./sweaterImages/sweater_red.png')} style = {{marginLeft: 60, marginBottom:10}} alt = 'Blue Sweater' width = '80' height = '80'/>
+               <img src = {require('./sweaterImages/sweater_brown.png')} style ={{marginLeft: 60, marginBottom:10}} alt = 'Blue Sweater' width = '80' height = '80'/>
+             </div>
+
+  			<SimplePieChart data = {chartData} />
+
+
   			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
   		</div>
   		);
