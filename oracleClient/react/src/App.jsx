@@ -42,7 +42,7 @@ state = { loading: true, drizzleState: null };
 
      <Container style = {{border: '12px solid #535b57',
          borderRadius: '10px',
-         marginTop: '50px',
+         marginTop: '100px',
          marginBottom: '100px'}} >
        <h1 >
           Vote for the your favorite sweater color</h1>
